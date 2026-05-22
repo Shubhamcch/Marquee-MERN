@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,
+        td,
+        th,
+        tr{
+            border: 1px solid black;
+            border-collapse: collapse;   /* added */
+            padding: 5px;                /* added */
+            text-align: center;          /* added */
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th colspan="7">Time Table For Primary School</th>
+            </tr>
+        </thead>
+
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>8:00a.m-8:30a.m</th>
+                <th>8:30a.m-9:30a.m</th>
+                <th>9:30a.m-10:30a.m</th>
+                <th>10:30a.m-11:30a.m</th>
+                <th>11:30a.m-12:30a.m</th>
+                <th>12:30p.m-1:30p.m</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Monday</td>
+
+                <td rowspan="6">Assembly</td>
+
+                <td>Science</td>
+                <td>English</td>
+
+                <!-- fixed -->
+                <td rowspan="6">Break</td>
+
+                <td>Art</td>
+                <td>Physical Education</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+
+                <!-- removed extra td because of rowspan -->
+
+                <td>Science</td>
+                
+                <td>Math</td>
+
+                <td>English</td>
+                <td>Physical Education</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+
+                <td>English</td>
+                <td>History</td>
+
+                <td>Science</td>
+                <td>Art</td>
+            </tr>
+
+            <tr>
+                <td>Thursday</td>
+
+                <td>History</td>
+                <td>English</td>
+
+                <td>Math</td>
+                <td>Physical Education</td>
+            </tr>
+
+            <tr>
+                <td>Friday</td>
+
+                <td>Art</td>
+                <td>Physical Education</td>
+
+                <td>Science</td>
+                <td>English</td>
+            </tr>
+
+            <tr>
+                <td>Saturday</td>
+
+                <td>Physical Education</td>
+                <td>Art</td>
+
+                <td>English</td>
+                <td>Math</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="7">
+                    Time Table will be Effective from 19/05/2026
+                </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>
