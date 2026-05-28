@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .header {
+      background: #131921;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #ff9900;
+    }
+    .header input {
+      padding: 8px;
+      width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #eee;
+    }
+    .product-card h2 {
+      font-size: 18px;
+      margin: 15px 0 5px;
+      color: #333;
+    }
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #b12704;
+      margin: 10px 0;
+    }
+    .description {
+      font-size: 14px;
+      color: #555;
+      padding: 0 15px 15px;
+    }
+    .buy-btn {
+      display: inline-block;
+      background: #ff9900;
+      color: #111;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .buy-btn:hover {
+      background: #f0c14b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Amazon Clone</h1>
+    <input type="text" placeholder="Search products...">
+  </div>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRCQAIKA8y4k9k_JpJ6lGQR5DCIgGFj8evztPbz4bbDSRqGwl_LFA3r1OFS81vf7yjy36cA9F7kugmVzUkAVYYhe0mcwpAc1o9yv2pWTSLtZJssicUmQgfGraKuy4AmBbp9RWs5rx03&usqp=CAc" alt="Shoes">
+      <h2>T-Shirt</h2>
+      <div class="price">₹3000</div>
+      <p class="description">Premium leather shoes crafted for comfort and elegance.</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS5TaNyjaTXjz12f3DdstWpnzacjYliTSbTQtadxFOPBUd4HJlhw2IlNIXgoH7x_EKe7vF7f_hksAyyXawO38-_qtLaMpvQyA" alt="Watch">
+      <h2>Shirt</h2>
+      <div class="price">₹5000</div>
+      <p class="description">Stylish smartwatch with fitness tracking and notifications.</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://cdnmedia.dsc-cricket.com/media/catalog/product/cache/42540e3df8c40aae349dc161e4942d7b/d/s/dsc-rs-060-supreme-english-willow-cricket-bat-2.jpg" alt="Headphones">
+      <h2>Bat</h2>
+      <div class="price">₹2500</div>
+      <p class="description">High-quality sound with noise cancellation technology.</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+  </div>
+</body>
+</html>
