@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile Card</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 10px 0 5px 0;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+}
+
+.social {
+    margin: 10px 0;
+}
+
+.social a {
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    background: #e0e0e0;
+}
+
+.subscribe {
+    background: #ff4d4d;
+    color: white;
+}
+
+.stats {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/6522/6522516.png" alt="profile">
+    <h2>CodingNepal</h2>
+    <p>Designer & Developer</p>
+
+    <div class="social">
+        <a href="#">📘</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
+    </div>
+
+    <div class="buttons">
+        <button class="message">Message</button>
+        <button class="subscribe">Subscribe</button>
+    </div>
+
+    <div class="stats">
+        <div>20.4k ❤️</div>
+        <div>14.3k 💬</div>
+        <div>12.8k 🔁</div>
+    </div>
+</div>
+
+</body>
+</html>

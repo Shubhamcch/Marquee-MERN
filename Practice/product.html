@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            width: 400px;
+            height: 600px;
+            border: 2px solid;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px black;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .price{
+            background-color: black;
+            border-radius: 20px;
+            color: yellow;
+            padding: 6px 12px;
+            display: inline-block;
+            width: auto;
+        }
+
+        .head{
+            color: orange;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: rgb(249, 203, 211);">
+
+    <h1 style="color: orange; display: inline-block; margin-right: 10px;">PRODUCT</h1>
+    <h1 style="color: orange; background-color: beige; display: inline-block;">CARD</h1>
+
+    <div class="container">
+
+        <div class="box">
+            <img class="img" src="https://images.unsplash.com/photo-1566669086984-077347c1f4bb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXRpZnVsJTIwZmxvd2VyfGVufDB8fDB8fHww">
+
+            <h2 class="head">Sunflower</h2>
+
+            <h3 class="price">40.00 $</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+
+        <div class="box">
+            <img class="img" src="https://images.stockcake.com/public/a/6/1/a61b1a1a-71f4-493b-ae11-2b1d6235f9c2_large/sunlit-blooming-flower-stockcake.jpg">
+
+            <h2 class="head">Lily</h2>
+
+            <h3 class="price">55.00 $</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+
+        <div class="box">
+            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7FpqUQULdVWLLI427ibrxxi2L9ab3iIamg&s">
+
+            <h2 class="head">Rose</h2>
+
+            <h3 class="price">37.00 $</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
