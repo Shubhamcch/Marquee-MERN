@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Recreation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- Header Section --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 15px;
+        }
+
+        .tab {
+            display: flex;
+            align-items: center;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .tab.flipkart {
+            background-color: #ffde26;
+            color: #000;
+        }
+
+        .tab.travel {
+            background-color: #dbdbdb;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .icon-check {
+            background-color: #1cc679;
+            color: white;
+            font-size: 10px;
+            padding: 2px 4px;
+            border-radius: 3px;
+            margin-right: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-plane {
+            margin-right: 8px;
+            color: #4a90e2;
+            font-size: 16px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .location svg {
+            width: 14px;
+            margin-right: 8px;
+        }
+
+        /* --- Color Bar Section --- */
+        .color-bar-container {
+            background-color: #d1cbc7;
+            border-radius: 8px;
+            height: 45px;
+            display: flex;
+            padding: 6px;
+            gap: 10px;
+        }
+
+        .bar-cyan {
+            background-color: #8affd1;
+            flex: 0 0 68%;
+            border-radius: 4px;
+        }
+
+        .bar-green {
+            background-color: #92e882;
+            flex: 0 0 24%;
+            border-radius: 4px;
+        }
+
+        /* --- Box Grid Section --- */
+        .box-grid {
+            display: flex;
+            background-color: #aeff29;
+            /* Lime green borders/background */
+            padding: 4px;
+            /* Creates the outer border */
+            gap: 4px;
+            /* Creates the vertical dividers */
+        }
+
+        .box {
+            background-color: #e6e7e8;
+            flex: 1;
+            height: 70px;
+            font-size: 14px;
+            padding: 8px;
+            color: #333;
+        }
+
+        /* --- Banners Section --- */
+        .banners-container {
+            background-color: #d8d8d8;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            gap: 15px;
+            height: 220px;
+        }
+
+        .banner {
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .banner-1 {
+            background-color: #00ffff;
+            /* Cyan */
+            flex: 3.5;
+        }
+
+        .banner-2 {
+            background-color: #d81b3f;
+            /* Crimson Red */
+            flex: 4;
+            color: #1a0307;
+            /* Darker text specifically for this banner */
+        }
+
+        .banner-3 {
+            background-color: #f1f4dc;
+            /* Beige */
+            flex: 2;
+        }
+
+        /* --- Scrolling Product Banner --- */
+
+        .scroll-section {
+            background: #f7d94c;
+            padding: 15px;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .scroll-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .scroll-wrapper {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-wrapper::-webkit-scrollbar-thumb {
+            background: #999;
+            border-radius: 10px;
+        }
+
+        .product-row {
+            display: flex;
+            gap: 15px;
+            min-width: max-content;
+        }
+
+        .product-card {
+            width: 210px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            flex-shrink: 0;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f3f3f3;
+        }
+
+        .product-title {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .product-offer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .scroll-section {
+            width: 100%;
+            background: #f7d94c;
+            padding: 15px;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="tabs">
+                <div class="tab flipkart">
+                    <span class="icon-check">✓</span> Flipkart
+                </div>
+                <div class="tab travel">
+                    <span class="icon-plane">✈️</span> Travel
+                </div>
+            </div>
+            <div class="location">
+                <svg viewBox="0 0 384 512" fill="black">
+                    <path
+                        d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                </svg>
+                Location : Vadodra
+            </div>
+        </div>
+
+        <div class="color-bar-container">
+            <div class="bar-cyan"></div>
+            <div class="bar-green"></div>
+        </div>
+
+        <div class="box-grid">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+            <div class="box">Box 6</div>
+            <div class="box">Box 7</div>
+            <div class="box">Box 8</div>
+            <div class="box">Box 9</div>
+            <div class="box">Box 10</div>
+            <div class="box">Box 11</div>
+            <div class="box">Box 12</div>
+            <div class="box">Box 13</div>
+            <div class="box">Box 14</div>
+        </div>
+
+        <div class="banners-container">
+            <div class="banner banner-1">Ad Banner 1</div>
+            <div class="banner banner-2">Ad Banner 2</div>
+            <div class="banner banner-3">Ad Banner 3</div>
+        </div>
+
+        <!-- NEW ROW -->
+        <div class="scroll-section">
+
+            <div class="scroll-title">
+                People also viewed
+            </div>
+
+            <div class="scroll-wrapper">
+
+                <div class="product-row">
+
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/71UhI4UqMUL._SL1500_.jpg">
+                        <div class="product-title">Music on the Go</div>
+                        <div class="product-offer">Min 30% Off</div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._SL1500_.jpg">
+                        <div class="product-title">Milton Bottle</div>
+                        <div class="product-offer">From ₹129</div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._UY741_.jpg">
+                        <div class="product-title">Deal of the Day</div>
+                        <div class="product-offer">From ₹999</div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/61bLU7QzebL._SL1500_.jpg">
+                        <div class="product-title">Top Picks</div>
+                        <div class="product-offer">Special Offer</div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/71K9CbNZPsL._SL1500_.jpg">
+                        <div class="product-title">Smart Watches</div>
+                        <div class="product-offer">Up to 70% Off</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-title">
+            People also viewed
+        </div>
+
+        <div class="scroll-wrapper">
+
+            <div class="product-row">
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71UhI4UqMUL._SL1500_.jpg">
+                    <div class="product-title">Music on the Go</div>
+                    <div class="product-offer">Min 30% Off</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._SL1500_.jpg">
+                    <div class="product-title">Milton Bottle</div>
+                    <div class="product-offer">From ₹129</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._UY741_.jpg">
+                    <div class="product-title">Deal of the Day</div>
+                    <div class="product-offer">From ₹999</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61bLU7QzebL._SL1500_.jpg">
+                    <div class="product-title">Top Picks</div>
+                    <div class="product-offer">Special Offer</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71K9CbNZPsL._SL1500_.jpg">
+                    <div class="product-title">Smart Watches</div>
+                    <div class="product-offer">Up to 70% Off</div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61L5QgPvgqL._SL1500_.jpg">
+                    <div class="product-title">Travel Bags</div>
+                    <div class="product-offer">Min 50% Off</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
