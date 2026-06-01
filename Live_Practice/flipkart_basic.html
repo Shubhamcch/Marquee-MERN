@@ -309,7 +309,7 @@
             font-weight: bold;
         }
 
-        .brand-name{
+        .brand-name {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: green;
             transform: 1.3x;
@@ -317,6 +317,126 @@
             font-size: 30px;
             font-weight: 100;
             transition-duration: 0.5s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background: #111827;
+            color: #fff;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 50px 70px;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-column h4 {
+            color: #878787;
+            font-size: 13px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #2874f0;
+        }
+
+        .address {
+            max-width: 320px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .address p {
+            color: #fff;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 22px;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #2874f0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 70px;
+            font-size: 14px;
+        }
+
+        .bottom-links {
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .bottom-links a i {
+            color: #f5c518;
+            margin-right: 8px;
+        }
+
+        .payment-icons img {
+            height: 24px;
+        }
+
+        @media(max-width:768px) {
+
+            .footer-top {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .bottom-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -427,19 +547,22 @@
             <div class="brand-cards">
 
                 <div class="brand-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s" alt="Brand 1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s"
+                        alt="Brand 1">
                     <div class="brand-offer">Min. 65% Off</div>
                     <p class="brand-name">Shoes 1</p>
                 </div>
 
                 <div class="brand-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s" alt="Brand 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s"
+                        alt="Brand 2">
                     <div class="brand-offer">Min. 65% Off</div>
                     <p class="brand-name">Shoes 2</p>
                 </div>
 
                 <div class="brand-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s" alt="Brand 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s"
+                        alt="Brand 3">
                     <div class="brand-offer">Min. 65% Off</div>
                     <p class="brand-name">Shoes 3</p>
                 </div>
@@ -447,6 +570,112 @@
             </div>
 
         </div>
+
+
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <div class="footer-column">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Flipkart Stories</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>GROUP COMPANIES</h4>
+                    <ul>
+                        <li><a href="#">Myntra</a></li>
+                        <li><a href="#">Cleartrip</a></li>
+                        <li><a href="#">Shopsy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>CONSUMER POLICY</h4>
+                    <ul>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+
+                <div class="address">
+                    <h4 style="color:#878787; margin-bottom:15px;">MAIL US:</h4>
+                    <p>
+                        Flipkart Internet Private Limited,<br>
+                        Buildings Alyssa, Begonia &<br>
+                        Clove Embassy Tech Village,<br>
+                        Outer Ring Road, Bengaluru,<br>
+                        Karnataka, India
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="address">
+                    <h4 style="color:#878787; margin-bottom:15px;">
+                        REGISTERED OFFICE ADDRESS:
+                    </h4>
+                    <p>
+                        Flipkart Internet Private Limited,<br>
+                        Buildings Alyssa, Begonia &<br>
+                        Clove Embassy Tech Village,<br>
+                        Outer Ring Road, Bengaluru,<br>
+                        Karnataka, India
+                    </p>
+                    <p style="margin-top:10px;">
+                        CIN : U51109KA2012PTC066107<br>
+                        Telephone : 044-45614700
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="bottom-links">
+                    <a href="#"><i class="fas fa-store"></i> Become a Seller</a>
+                    <a href="#"><i class="fas fa-bullhorn"></i> Advertise</a>
+                    <a href="#"><i class="fas fa-gift"></i> Gift Cards</a>
+                    <a href="#"><i class="fas fa-circle-question"></i> Help Center</a>
+                </div>
+
+                <div>
+                    © 2007-2026 Flipkart.com
+                </div>
+
+                <div class="payment-icons">
+                    <img src="https://i.imgur.com/U6aN8mA.png" alt="Payment Methods">
+                </div>
+
+            </div>
+
+        </footer>
 
 
 
