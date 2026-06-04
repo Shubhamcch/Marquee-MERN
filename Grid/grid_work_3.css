@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:sans-serif;
+    background:#f5f5f0;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.grid{
+    width:1100px;
+
+    display:grid;
+    gap:20px;
+
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: 260px 180px 220px;
+
+    grid-template-areas:
+        "customization scheduling scheduling"
+        "customization wallet inbox"
+        "sendgifts sendgifts reminders";
+}
+
+.card{
+    border-radius:25px;
+    padding:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card h2{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+/* Card placements */
+.customization{
+    grid-area:customization;
+    background:#c9bceb;
+}
+
+.scheduling{
+    grid-area:scheduling;
+    background:#f59aae;
+}
+
+.wallet{
+    grid-area:wallet;
+    background:#c7db93;
+}
+
+.inbox{
+    grid-area:inbox;
+    background:#f5d76c;
+}
+
+.send-gifts{
+    grid-area:sendgifts;
+    background:#f8b07d;
+}
+
+.reminders{
+    grid-area:reminders;
+    background:#bfd4e2;
+}
+
+/* Demo content */
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            rgba(255,255,255,.08),
+            rgba(255,255,255,0)
+        );
+}
