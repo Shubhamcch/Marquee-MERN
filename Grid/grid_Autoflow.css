@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #e6edf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.page {
+    width: min(1120px, 100%);
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 36px 32px;
+    box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
+}
+
+.heading {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #ff8c42;
+    font-size: clamp(2rem, 2.6vw, 2.7rem);
+    letter-spacing: 1px;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.search-wrapper input {
+    width: min(420px, 100%);
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    border-radius: 999px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    background: #ffffff;
+    box-shadow: inset 0 4px 10px rgba(15, 23, 42, 0.06);
+    outline: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-auto-rows: 220px;
+    gap: 20px;
+    grid-auto-flow: dense;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 18px;
+    background: #f00606;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.09);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

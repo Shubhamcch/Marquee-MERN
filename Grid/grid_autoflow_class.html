@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #e6edf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .page {
+            width: min(1120px, 100%);
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 36px 32px;
+            box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
+        }
+        .heading {
+            margin: 0 0 10px;
+            text-align: center;
+            color: #ff8c42;
+            font-size: clamp(2rem, 2.6vw, 2.7rem);
+            letter-spacing: 1px;
+        }
+        .search-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .search-wrapper input {
+            width: min(420px, 100%);
+            border: 1px solid rgba(15, 23, 42, 0.15);
+            border-radius: 999px;
+            padding: 14px 18px;
+            font-size: 1rem;
+            background: #ffffff;
+            box-shadow: inset 0 4px 10px rgba(15, 23, 42, 0.06);
+            outline: none;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-auto-rows: 220px;
+            gap: 20px;
+            grid-auto-flow: dense;
+        }
+        .card {
+            overflow: hidden;
+            border-radius: 18px;
+            background: #ffffff;
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.09);
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <h1 class="heading">Interactive Photo Gallery</h1>
+        <div class="search-wrapper">
+            <input type="search" placeholder="Search...">
+        </div>
+        <section class="gallery">
+            <a class="card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Landscape"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Lake"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Hills"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=800&q=80" alt="Iceberg"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=800&q=80" alt="Canyon"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Forest"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Green Valley"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Path"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Sunset"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Mountain View"></article>
+            <a class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Field"></article>
+        </section>
+    </main>
+</body>
+</html>
