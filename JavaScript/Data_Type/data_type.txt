@@ -1,0 +1,32 @@
+1. Primitive Data Types
+
+These are immutable and stored directly in memory.
+1. Number - Represents integers and floating-point numbers.
+2. String - Represents text enclosed in quotes.
+3. Boolean - Represents true or false.
+4. Undefined - A variable declared but not assigned a value.
+5. Null - Represents an intentional empty value, null returns
+"object", and return which is a historical bug in JavaScript dating
+back to its first implementation.
+6. Symbol - Represents a unique and immutable value (often used as
+object keys).
+7. NaN ----- isNan()
+Number.NaN is a property in JavaScript that represents a special
+value indicating that a value of a expression is not a number. It
+stands for "Not-A-Number" and is a unique data type in JavaScript.
+This property is used to identify values that do not represent a valid
+number, which can occur in various situations
+, such as when a mathematical operation fails to produce a numeric
+result,
+
+2. Non-Primitive (Reference) Data Types
+
+1. Function - A block of reusable code.
+2. Object - Collection of key-value pairs.
+3. Array - Ordered list of values.
+4. Classes-|
+
+Special * -> typeof
+The typeof operator is used to determine the data type of a
+value or variable. It always returns a string representing the
+type. For example:

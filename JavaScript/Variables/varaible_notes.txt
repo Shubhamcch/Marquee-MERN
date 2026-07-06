@@ -1,0 +1,52 @@
+JavaScript provides three ways to declare variables:
+
+1. Var : Variable declared with var keyword have :
+
+. Function-scoped (or globally scoped if declared outside a
+function).
+. Can be re-declared and re-assigned.
+. Hoisted (moved to the top of scope) but initialized
+as undefined
+
+var name = "John";
+var name = "Doe"; // Redeclaration allowed
+console.log(name); // Output: Dotis
+
+2. Let (Recommended for variables that change)
+. Block-Scoped (only available inside { } where declared).
+. Can be updated but not redeclared in the same scope.
+. Hoisted but not initialized (access before declaration causes
+ReferenceError) .-
+
+
+3. Const (Recommended for constants)
+
+. Block-scoped.
+. Must be initialized at declaration.
+. Cannot be updated or redeclared.
+. The value itself can be mutable if it's an object or array.
+
+const PI = 3.1416;
+// PI = 3.14; X Error: Assignment to constant variable
+
+const colors = ["red", "blue"];
+colors.push("green"); //
+console.log(colors); // Output: ["red", "blue", "green"]
+
+Allowed (array content can change)
+
+
+What is Hoisting?
+
+Hoisting is a JavaScript mechanism where variables and
+function declarations are moved to the top of their
+containing scope during the compilation phase.
+
+This means that you can use functions and variables
+before they are declared in the code
+
+. Variables declared with var keyword moved to the
+top of scope) but initialized as undefined data Type
+. Function declaration are fully hoisted (including body)
+
+I

@@ -1,0 +1,37 @@
+· Special Operator:
+
+Nullish Collesing Operator ?? :
+The nullish coalescing operator ( ?? ) is a logical operator in
+JavaScript that returns its right-hand side operand when its
+left-hand side operand is null or undefined
+
+Example:
+
+let name = null;
+let displayName = name ?? "Guest"; // Guest
+let anotherName = "Aisha" ?? "Guest" ; // Aisha
+Output
+
+I
+· Special Operator:
+
+Nullish Collesing Operator ?? :
+The nullish coalescing operator ( ?? ) is a logical operator in
+JavaScript that returns its right-hand side operand when its
+left-hand side operand is null or undefined
+
+Example:
+let name = null;
+let displayName = name ?? "Guest"; // Guest
+let anotherName = "Aisha" ?? "Guest" ; // Aisha
+
+Optional Chaining ( .? ) :
+Optional chaining ( ?. ) in JavaScript is an ES2020 feature that
+lets you
+*
+Safely access nested object properties,
+* Array elements, or
+* Call functions without throwing an error if an intermediate
+value is null or undefined - instead, it returns undefined
+
+I
